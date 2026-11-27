@@ -1,0 +1,38 @@
+Analyze this entire React project and extract the coding conventions it follows.
+Your goal is to produce a single markdown file (copilot-instructions.md) that another
+AI agent can use to write new React code in a different project that follows exactly
+the same conventions.
+
+Rules:
+- Base everything on what you actually see in the code. Do NOT invent rules or
+  add generic React best practices that this project does not follow.
+- If a pattern is used consistently, state it as a rule. If it is inconsistent,
+  list it under "Unclear / inconsistent" instead of guessing.
+- For every rule, include a short real example taken from the project
+  (with the file path it came from).
+- Write rules as imperative instructions ("Use X", "Never do Y").
+
+Cover at least these areas:
+1. Folder and file structure (where components, hooks, services, types, utils,
+   pages, assets live; how features are organized)
+2. Naming conventions (files, components, hooks, variables, constants, types/interfaces, CSS classes)
+3. Component style (function vs class, props typing, default exports vs named exports,
+   file layout order, size limits, composition patterns)
+4. State management (local state, context, redux/zustand/etc., server state)
+5. API calls and data fetching (client setup, error handling, loading states)
+6. Routing
+7. Styling approach (CSS modules, styled-components, Tailwind, etc.)
+8. Forms and validation
+9. Error handling and logging
+10. TypeScript usage (if applicable): typing rules, interfaces vs types, strictness
+11. Testing (framework, file location, naming, what gets tested, mocking approach)
+12. Linting, formatting, and tooling config (ESLint, Prettier, tsconfig, etc.)
+13. Libraries used and the rule for when to use which
+14. Import ordering, path aliases, comments and documentation style
+15. Git/commit/PR conventions if they are documented in the repo
+
+Also read README, config files (package.json, eslint, prettier, tsconfig, vite/webpack)
+and any existing docs for stated conventions.
+
+Finish with a "Checklist before submitting code" section that the agent can run
+against its own output.
